@@ -6,16 +6,15 @@
     <title>Треки -FeelReal Admin Panel</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
-    <link href="css/stacktable.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
 </head>
 <body>
 <header class="header ">
     <div class="header__wrap row">
-        <span>FeelReal Admin Panel</span>
+        <span class="header__name">FeelReal Admin Panel</span>
         <span>Треки</span>
-        <div><img src="img/Admin.svg"></div>
+        <a href="#"><img src="img/Admin.svg"></a>
     </div>
 </header>
 <div class="row content">
@@ -24,7 +23,11 @@
             <img src="img/avatar.svg" alt="Avatar" class="sidebar__avatar">
             <span>Добро пожаловать, Админ</span>
         </div>
-        <ul>
+        <a class="sidebar__menu"><img src="img/menu.svg" alt="Menu-open"></a>
+        <ul class="sidebar__list">
+            <li class="sidebar__close">
+                <a href="#"><img src="img/close.svg" alt="close"></a>
+            </li>
             <li>
                 <a href="#" class="sidebar__link">Треки</a>
             </li>
@@ -43,75 +46,87 @@
     <div class="main">
         <div class="main__wrap" id="primary">
             <h2 class="main__title">Список треков</h2>
-            <a data-src="#modalAdd" data-fancybox="" class="main__button">Добавить трек</a>
+            <a href="#" data-src="#modalAdd" data-fancybox="" class="main__button">Добавить трек</a>
             <div class="main__modalAdd">
                 <div id="modalAdd">
                     <div class="main__add">
                         <span class="main__subtitle">Добавить трек</span>
-                        <div class="row main__item">
-                            <span>Имя </span>
-                            <input type="text">
+                        <div class=" main__item">
+                            <label class="main__clause">Имя </label>
+                            <input type="text" class="main__input" placeholder="Введите имя" required>
                         </div>
-                        <div class="row main__item">
-                            <span>Описание </span>
-                            <input type="text">
+                        <div class=" main__item">
+                            <label class="main__clause">Описание </label>
+                            <input type="text" class="main__input" placeholder="Введите описание" required>
                         </div>
-                        <div class="row main__item">
-                            <span>Статус</span>
-                            <select>
-                                <option>Активный</option>
-                                <option>На модерации</option>
+                        <div class=" main__item">
+                            <label class="main__clause">Статус</label>
+                            <select size="1" class="main__select">
+                                <option selected="selected" value="1">Активный</option>
+                                <option value="2">На модерации</option>
                             </select>
                         </div>
-                        <div class="row main__item">
-                            <span>Трек</span>
+                        <div class=" main__item">
+                            <label class="main__clause">Трек</label>
                             <input type="file">
                         </div>
-                        <div class="row main__item">
-                            <span>Иконка </span>
+                        <div class=" main__item">
+                            <label class="main__clause">Иконка </label>
                             <input type="file">
                         </div>
-                        <div class="row main__item">
-                            <span>Разрешено ли скачивание</span>
-                            <div class="row">
-                                <input type="radio" checked="checked" name="a" id='i01' onchange="t01();">
-                                <label>Да</label>
-                            </div>
-                            <div class="row">
-                                <input type="radio" name="a" id='i02' onchange="t02();">
-                                <label>Нет</label>
-                            </div>
-                        </div>
-                        <div class="row main__item">
-                            <span>Публичный</span>
-                            <div class="row">
-                                <input type="radio">
-                                <label>Да</label>
-                            </div>
-                            <div class="row">
-                                <input type="radio">
-                                <label>Нет</label>
+                        <div class="main__item">
+                            <span class="main__clause">Разрешено ли скачивание</span>
+                            <div class="row main__location">
+                                <div class="row">
+                                    <label>
+                                        <input type="radio" checked="checked">
+                                        Да
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <label>
+                                        <input type="radio">
+                                        Нет
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                        <div class="row main__item">
-                            <span>Категории</span>
-                            <select multiple="multiple" size="3">
-                                <option>Категория 1</option>
-                                <option>Категория 2</option>
-                                <option>Категория 3</option>
-                                <option>Категория 4</option>
+                        <div class=" main__item">
+                            <span class="main__clause">Публичный</span>
+                            <div class="row main__location">
+                                <div class="row">
+                                    <label>
+                                        <input type="radio">
+                                        Да
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <label>
+                                        <input type="radio">
+                                        Нет
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" main__item">
+                            <label class="main__clause">Категории</label>
+                            <select size="1" class="main__select">
+                                <option value="1" selected="selected">Категория 1</option>
+                                <option value="2">Категория 2</option>
+                                <option value="3">Категория 3</option>
+                                <option value="4">Категория 4</option>
                             </select>
                         </div>
-                        <div class="row main__item">
-                            <span>Запахи</span>
-                            <select multiple="multiple" size="3">
-                                <option>Запахи 1</option>
-                                <option>Запахи 2</option>
-                                <option>Запахи 3</option>
-                                <option>Запахи 4</option>
+                        <div class=" main__item">
+                            <label class="main__clause">Запахи</label>
+                            <select size="1" class="main__select">
+                                <option value="1" selected="selected">Запахи 1</option>
+                                <option value="2">Запахи 2</option>
+                                <option value="3">Запахи 3</option>
+                                <option value="4">Запахи 4</option>
                             </select>
                         </div>
-                        <div class="row main__item">
+                        <div class="row main__item main__location">
                             <button class="main__cancel">Отменить</button>
                             <button class="main__save">Сохранить</button>
                         </div>
@@ -119,173 +134,568 @@
 
                 </div>
             </div>
-            <table>
-                <tr class="main__name row main__line main__inner">
-                    <th>ИД</th>
-                    <th>Имя</th>
-                    <th>Описание</th>
-                    <th>Статус</th>
-                    <th>Путь к файлу</th>
-                    <th>Иконка</th>
-                    <th>Разрешено ли скачивание</th>
-                    <th>Публичный или нет</th>
-                    <th>Продолжительность видео</th>
-                    <th>К-во просмотров</th>
-                    <th>Категории</th>
-                    <th>Запахи</th>
-                    <th>Дата создания</th>
-                    <th>Дата обновления</th>
-                    <th>Действие</th>
-                </tr>
-                <tr class=" row main__line main__inner main__info">
-                    <td>1</td>
-                    <td>Имя 1</td>
-                    <td>Описание 1</td>
-                    <td>Активный</td>
-                    <td><a href="#" class="main__link">Скачать</a></td>
-                    <td><img src="img/management.svg" alt="Иконка"></td>
-                    <td>Разрешено</td>
-                    <td>Публичный</td>
-                    <td>2-15</td>
-                    <td>0</td>
-                    <td>
-                        <ul>
-                            <li>Категориия 1</li>
-                            <li>Категориия 2</li>
-                            <li>Категориия 3</li>
-                            <li>Категориия 4</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Запах 1</li>
-                            <li>Запах 2</li>
-                            <li>Запах 3</li>
-                            <li>Запах 4</li>
-                        </ul>
-                    </td>
-                    <td>21-08-19</td>
-                    <td>21-08-19</td>
-                    <td class="row main__action">
-                        <div><img src="img/edit.svg" alt="edit"></div>
-                        <div><img src="img/delete.svg" alt="delete"></div>
-                    </td>
-                </tr>
-                <tr class=" row main__line main__inner main__info">
-                    <td>2</td>
-                    <td>Имя 2</td>
-                    <td>Описание 2</td>
-                    <td>Активный</td>
-                    <td><a href="#" class="main__link">Скачать</a></td>
-                    <td><img src="img/management.svg" alt="Иконка"></td>
-                    <td>Разрешено</td>
-                    <td>Публичный</td>
-                    <td>2-15</td>
-                    <td>0</td>
-                    <td>
-                        <ul>
-                            <li>Категориия 1</li>
-                            <li>Категориия 2</li>
-                            <li>Категориия 3</li>
-                            <li>Категориия 4</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Запах 1</li>
-                            <li>Запах 2</li>
-                            <li>Запах 3</li>
-                            <li>Запах 4</li>
-                        </ul>
-                    </td>
-                    <td>21-08-19</td>
-                    <td>21-08-19</td>
-                    <td class="row main__action">
-                        <div><img src="img/edit.svg" alt="edit"></div>
-                        <div><img src="img/delete.svg" alt="delete"></div>
-                    </td>
-                </tr>
-                <tr class=" row main__line main__inner main__info">
-                    <td>3</td>
-                    <td>Имя 3</td>
-                    <td>Описание 3</td>
-                    <td>Активный</td>
-                    <td><a href="#" class="main__link">Скачать</a></td>
-                    <td><img src="img/management.svg" alt="Иконка"></td>
-                    <td>Разрешено</td>
-                    <td>Публичный</td>
-                    <td>2-15</td>
-                    <td>0</td>
-                    <td>
-                        <ul>
-                            <li>Категориия 1</li>
-                            <li>Категориия 2</li>
-                            <li>Категориия 3</li>
-                            <li>Категориия 4</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Запах 1</li>
-                            <li>Запах 2</li>
-                            <li>Запах 3</li>
-                            <li>Запах 4</li>
-                        </ul>
-                    </td>
-                    <td>21-08-19</td>
-                    <td>21-08-19</td>
-                    <td class="row main__action">
-                        <div><img src="img/edit.svg" alt="edit"></div>
-                        <div><img src="img/delete.svg" alt="delete"></div>
-                    </td>
-                </tr>
-                <tr class=" row main__line main__inner main__info">
-                    <td>4</td>
-                    <td>Имя 4</td>
-                    <td>Описание 4</td>
-                    <td>Активный</td>
-                    <td><a href="#" class="main__link">Скачать</a></td>
-                    <td><img src="img/management.svg" alt="Иконка"></td>
-                    <td>Разрешено</td>
-                    <td>Публичный</td>
-                    <td>2-15</td>
-                    <td>0</td>
-                    <td>
-                        <ul>
-                            <li>Категориия 1</li>
-                            <li>Категориия 2</li>
-                            <li>Категориия 3</li>
-                            <li>Категориия 4</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Запах 1</li>
-                            <li>Запах 2</li>
-                            <li>Запах 3</li>
-                            <li>Запах 4</li>
-                        </ul>
-                    </td>
-                    <td>21-08-19</td>
-                    <td>21-08-19</td>
-                    <td class="row main__action">
-                        <div><img src="img/edit.svg" alt="edit"></div>
-                        <div><img src="img/delete.svg" alt="delete"></div>
-                    </td>
-                </tr>
-            </table>
+            <div class="main__container">
+                <table class="main__table">
+                    <tr class=" row  main__inner">
+                        <th class="main__name">ИД</th>
+                        <th class="main__name">Имя</th>
+                        <th class="main__name">Описание</th>
+                        <th class="main__name">Статус</th>
+                        <th class="main__name">Иконка</th>
+                        <th class="main__name">Разрешено ли скачивание</th>
+                        <th class="main__name">Публичный или нет</th>
+                        <th class="main__name">Продолжительность видео</th>
+                        <th class="main__name">К-во просмотров</th>
+                        <th class="main__name">Категории</th>
+                        <th class="main__name">Запахи</th>
+                        <th class="main__name">Дата создания</th>
+                        <th class="main__name">Дата обновления</th>
+                        <th class="main__name">Путь к файлу</th>
+                        <th class="main__name">Действие</th>
+                    </tr>
+                    <tr class=" row  main__inner main__info">
+                        <td>1</td>
+                        <td>Имя 1</td>
+                        <td>Описание 1</td>
+                        <td>
+                            <div class="row main__status">
+                                <div class="main__circle main__circle--green"></div>
+                                Активный
+                            </div>
+
+                        </td>
+                        <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td>Разрешено</td>
+                        <td>Публичный</td>
+                        <td>2-15</td>
+                        <td>0</td>
+                        <td>
+                            <ul>
+                                <li>Категориия 1</li>
+                                <li>Категориия 2</li>
+                                <li>Категориия 3</li>
+                                <li>Категориия 4</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Запах 1</li>
+                                <li>Запах 2</li>
+                                <li>Запах 3</li>
+                                <li>Запах 4</li>
+                            </ul>
+                        </td>
+                        <td>21-08-19</td>
+                        <td>21-08-19</td>
+                        <td><a href="#"><img src="img/download.svg" alt="Download"></a></td>
+                        <td class="row main__action">
+                            <a href="#" data-src="#modalEdit1" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
+                            <div class="main__modalAdd">
+                                <div id="modalEdit1">
+                                    <div class="main__add">
+                                        <span class="main__subtitle">Редактировать трек</span>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Имя </label>
+                                            <input type="text" class="main__input" placeholder="Введите имя" required>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Описание </label>
+                                            <input type="text" class="main__input" placeholder="Введите описание"
+                                                   required>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Статус</label>
+                                            <select size="1" class="main__select">
+                                                <option selected="selected" value="1">Активный</option>
+                                                <option value="2">На модерации</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Трек</label>
+                                            <input type="file">
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Иконка </label>
+                                            <input type="file">
+                                        </div>
+                                        <div class="main__item">
+                                            <span class="main__clause">Разрешено ли скачивание</span>
+                                            <div class="row main__location">
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio" checked="checked">
+                                                        Да
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Нет
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" main__item">
+                                            <span class="main__clause">Публичный</span>
+                                            <div class="row main__location">
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Да
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Нет
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Категории</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Категория 1</option>
+                                                <option value="2">Категория 2</option>
+                                                <option value="3">Категория 3</option>
+                                                <option value="4">Категория 4</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Запахи</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Запахи 1</option>
+                                                <option value="2">Запахи 2</option>
+                                                <option value="3">Запахи 3</option>
+                                                <option value="4">Запахи 4</option>
+                                            </select>
+                                        </div>
+                                        <div class="row main__item main__location">
+                                            <button class="main__cancel">Отменить</button>
+                                            <button class="main__save">Сохранить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div><img src="img/delete.svg" alt="delete"></div>
+                        </td>
+                    </tr>
+                    <tr class=" row  main__inner main__info">
+                        <td>2</td>
+                        <td>Имя 2</td>
+                        <td>Описание 2</td>
+                        <td>
+                            <div class="row main__status">
+                                <div class="main__circle main__circle--red"></div>
+                                Заблокирован
+                            </div>
+                        </td>
+                        <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td>Разрешено</td>
+                        <td>Публичный</td>
+                        <td>2-15</td>
+                        <td>0</td>
+                        <td>
+                            <ul>
+                                <li>Категориия 1</li>
+                                <li>Категориия 2</li>
+                                <li>Категориия 3</li>
+                                <li>Категориия 4</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Запах 1</li>
+                                <li>Запах 2</li>
+                                <li>Запах 3</li>
+                                <li>Запах 4</li>
+                            </ul>
+                        </td>
+                        <td>21-08-19</td>
+                        <td>21-08-19</td>
+                        <td><a href="#"><img src="img/download.svg" alt="Download"></a></td>
+                        <td class="row main__action">
+                            <a href="#" data-src="#modalEdit2" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
+                            <div class="main__modalAdd">
+                                <div id="modalEdit2">
+                                    <div class="main__add">
+                                        <span class="main__subtitle">Редактировать трек</span>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Имя </label>
+                                            <input type="text" class="main__input" placeholder="Введите имя" required>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Описание </label>
+                                            <input type="text" class="main__input" placeholder="Введите описание"
+                                                   required>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Статус</label>
+                                            <select size="1" class="main__select">
+                                                <option selected="selected" value="1">Активный</option>
+                                                <option value="2">На модерации</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Трек</label>
+                                            <input type="file">
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Иконка </label>
+                                            <input type="file">
+                                        </div>
+                                        <div class="main__item">
+                                            <span class="main__clause">Разрешено ли скачивание</span>
+                                            <div class="row main__location">
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio" checked="checked">
+                                                        Да
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Нет
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" main__item">
+                                            <span class="main__clause">Публичный</span>
+                                            <div class="row main__location">
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Да
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Нет
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Категории</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Категория 1</option>
+                                                <option value="2">Категория 2</option>
+                                                <option value="3">Категория 3</option>
+                                                <option value="4">Категория 4</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Запахи</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Запахи 1</option>
+                                                <option value="2">Запахи 2</option>
+                                                <option value="3">Запахи 3</option>
+                                                <option value="4">Запахи 4</option>
+                                            </select>
+                                        </div>
+                                        <div class="row main__item main__location">
+                                            <button class="main__cancel">Отменить</button>
+                                            <button class="main__save">Сохранить</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div><img src="img/delete.svg" alt="delete"></div>
+                        </td>
+                    </tr>
+                    <tr class=" row  main__inner main__info">
+                        <td>3</td>
+                        <td>Имя 3</td>
+                        <td>Описание 3</td>
+                        <td>
+                            <div class="row main__status">
+                                <div class="main__circle main__circle--yellow"></div>
+                                На модерации
+                            </div>
+                        </td>
+                        <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td>Разрешено</td>
+                        <td>Публичный</td>
+                        <td>2-15</td>
+                        <td>0</td>
+                        <td>
+                            <ul>
+                                <li>Категориия 1</li>
+                                <li>Категориия 2</li>
+                                <li>Категориия 3</li>
+                                <li>Категориия 4</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Запах 1</li>
+                                <li>Запах 2</li>
+                                <li>Запах 3</li>
+                                <li>Запах 4</li>
+                            </ul>
+                        </td>
+                        <td>21-08-19</td>
+                        <td>21-08-19</td>
+                        <td><a href="#"><img src="img/download.svg" alt="Download"></a></td>
+                        <td class="row main__action">
+                            <a href="#" data-src="#modalEdit3" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
+                            <div class="main__modalAdd">
+                                <div id="modalEdit3">
+                                    <div class="main__add">
+                                        <span class="main__subtitle">Редактировать трек</span>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Имя </label>
+                                            <input type="text" class="main__input" placeholder="Введите имя" required>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Описание </label>
+                                            <input type="text" class="main__input" placeholder="Введите описание"
+                                                   required>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Статус</label>
+                                            <select size="1" class="main__select">
+                                                <option selected="selected" value="1">Активный</option>
+                                                <option value="2">На модерации</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Трек</label>
+                                            <input type="file">
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Иконка </label>
+                                            <input type="file">
+                                        </div>
+                                        <div class="main__item">
+                                            <span class="main__clause">Разрешено ли скачивание</span>
+                                            <div class="row main__location">
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio" checked="checked">
+                                                        Да
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Нет
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" main__item">
+                                            <span class="main__clause">Публичный</span>
+                                            <div class="row main__location">
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Да
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Нет
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Категории</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Категория 1</option>
+                                                <option value="2">Категория 2</option>
+                                                <option value="3">Категория 3</option>
+                                                <option value="4">Категория 4</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Запахи</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Запахи 1</option>
+                                                <option value="2">Запахи 2</option>
+                                                <option value="3">Запахи 3</option>
+                                                <option value="4">Запахи 4</option>
+                                            </select>
+                                        </div>
+                                        <div class="row main__item main__location">
+                                            <button class="main__cancel">Отменить</button>
+                                            <button class="main__save">Сохранить</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div><img src="img/delete.svg" alt="delete"></div>
+                        </td>
+                    </tr>
+                    <tr class=" row  main__inner main__info">
+                        <td>4</td>
+                        <td>Имя 4</td>
+                        <td>Описание 4</td>
+                        <td>
+                            <div class="row main__status">
+                                <div class="main__circle main__circle--yellow"></div>
+                                На модерации
+                            </div>
+                        </td>
+                        <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td>Разрешено</td>
+                        <td>Публичный</td>
+                        <td>2-15</td>
+                        <td>0</td>
+                        <td>
+                            <ul>
+                                <li>Категориия 1</li>
+                                <li>Категориия 2</li>
+                                <li>Категориия 3</li>
+                                <li>Категориия 4</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Запах 1</li>
+                                <li>Запах 2</li>
+                                <li>Запах 3</li>
+                                <li>Запах 4</li>
+                            </ul>
+                        </td>
+                        <td>21-08-19</td>
+                        <td>21-08-19</td>
+                        <td><a href="#"><img src="img/download.svg" alt="Download"></a></td>
+                        <td class="row main__action">
+                            <a href="#" data-src="#modalEdit4" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
+                            <div class="main__modalAdd">
+                                <div id="modalEdit4">
+                                    <div class="main__add">
+                                        <span class="main__subtitle">Редактировать трек</span>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Имя </label>
+                                            <input type="text" class="main__input" placeholder="Введите имя" required>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Описание </label>
+                                            <input type="text" class="main__input" placeholder="Введите описание"
+                                                   required>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Статус</label>
+                                            <select size="1" class="main__select">
+                                                <option selected="selected" value="1">Активный</option>
+                                                <option value="2">На модерации</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Трек</label>
+                                            <input type="file">
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Иконка </label>
+                                            <input type="file">
+                                        </div>
+                                        <div class="main__item">
+                                            <span class="main__clause">Разрешено ли скачивание</span>
+                                            <div class="row main__location">
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio" checked="checked">
+                                                        Да
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Нет
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" main__item">
+                                            <span class="main__clause">Публичный</span>
+                                            <div class="row main__location">
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Да
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <label>
+                                                        <input type="radio">
+                                                        Нет
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Категории</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Категория 1</option>
+                                                <option value="2">Категория 2</option>
+                                                <option value="3">Категория 3</option>
+                                                <option value="4">Категория 4</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Запахи</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Запахи 1</option>
+                                                <option value="2">Запахи 2</option>
+                                                <option value="3">Запахи 3</option>
+                                                <option value="4">Запахи 4</option>
+                                            </select>
+                                        </div>
+                                        <div class="row main__item main__location">
+                                            <button class="main__cancel">Отменить</button>
+                                            <button class="main__save">Сохранить</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div><img src="img/delete.svg" alt="delete"></div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="row main__navigation">
+                <span class="main__text">Показано с 1 по 4 из 4 записей</span>
+                <ul class="row">
+                    <li>
+                        <a href="#" class="main__pagination"> &laquo;</a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination"> < </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination">1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination">2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination">3</a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination"> > </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-<script src="js/stacktable.js"></script>
-<script>
-    jQuery(document).ready(function ($) {
-        jQuery(function ($) {
-            $('#primary table').stacktable();
-        });
-    });
-</script>
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/main.js"></script>
 </body>

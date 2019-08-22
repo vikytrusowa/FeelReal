@@ -1,4 +1,5 @@
 @import "tracks";
+
 .login {
   background: #EFEFEF;
   font-family: 'Roboto', sans-serif;
@@ -55,13 +56,94 @@
   }
 }
 
-@media screen and (max-width: 768px){
-  .login__wrap{
+@media screen and (max-width: 1300px){
+  .main__container{
+    overflow-x: scroll;
+    width: 100%;
+  }
+  .main__inner th,
+  .main__inner td {
+    word-wrap: normal;
+    width: 140px;
+  }
+  .main__name{
+    font-size: 14px;
+  }
+  .main__info{
+    font-size: 14px;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .sidebar{
+    width: 150px;
+    &__heading{
+      padding: 0 10px;
+      & span{
+        text-align: center;
+      }
+    }
+  }
+  .login__wrap {
     width: 85%;
   }
+  .main{
+    width: calc(100% - 150px);
+  }
+  .main__navigation{
+    flex-direction: column;
+  }
+  .main__text{
+    margin-bottom: 20px;
+  }
 }
-@media screen and (max-width: 375px){
-  .login__inner{
+@media screen and (max-width: 415px){
+  .content{
+    flex-direction: column;
+  }
+  .sidebar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .main{
+    width: 100%;
+  }
+  .header__name {
+    width: 40%;
+    text-align: center;
+  }
+  .sidebar__menu{
+    display: block;
+    margin: 20px;
+  }
+  .sidebar__list{
+    display: none;
+    &--open{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background: black;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: 99;
+      padding: 50px 0;
+    }
+  }
+  .sidebar__link{
+    color: #FFFFFF;
+  }
+  .sidebar__close{
+    display: block;
+    align-self: flex-end;
+  }
+}
+@media screen and (max-width: 375px) {
+  .login__inner {
     width: 98%;
   }
 }
