@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Треки -FeelReal Admin Panel</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/stacktable.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
+</head>
+<body>
+<header class="header ">
+    <div class="header__wrap row">
+        <span>FeelReal Admin Panel</span>
+        <span>Треки</span>
+        <div><img src="img/Admin.svg"></div>
+    </div>
+</header>
+<div class="row content">
+    <div class="sidebar">
+        <div class="sidebar__heading">
+            <img src="img/avatar.svg" alt="Avatar" class="sidebar__avatar">
+            <span>Добро пожаловать, Админ</span>
+        </div>
+        <ul>
+            <li>
+                <a href="#" class="sidebar__link">Треки</a>
+            </li>
+            <li>
+                <a href="#" class="sidebar__link">Запахи</a>
+            </li>
+            <li>
+                <a href="#" class="sidebar__link">Групи запахов</a>
+            </li>
+            <li>
+                <a href="#" class="sidebar__link">Категории треков</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="main">
+        <div class="main__wrap" id="primary">
+            <h2 class="main__title">Список треков</h2>
+            <a data-src="#modalAdd" data-fancybox="" class="main__button">Добавить трек</a>
+            <div class="main__modalAdd">
+                <div id="modalAdd">
+                    <div class="main__add">
+                        <span class="main__subtitle">Добавить трек</span>
+                        <div class="row main__item">
+                            <span>Имя </span>
+                            <input type="text">
+                        </div>
+                        <div class="row main__item">
+                            <span>Описание </span>
+                            <input type="text">
+                        </div>
+                        <div class="row main__item">
+                            <span>Статус</span>
+                            <select>
+                                <option>Активный</option>
+                                <option>На модерации</option>
+                            </select>
+                        </div>
+                        <div class="row main__item">
+                            <span>Трек</span>
+                            <input type="file">
+                        </div>
+                        <div class="row main__item">
+                            <span>Иконка </span>
+                            <input type="file">
+                        </div>
+                        <div class="row main__item">
+                            <span>Разрешено ли скачивание</span>
+                            <div class="row">
+                                <input type="radio" checked="checked" name="a" id='i01' onchange="t01();">
+                                <label>Да</label>
+                            </div>
+                            <div class="row">
+                                <input type="radio" name="a" id='i02' onchange="t02();">
+                                <label>Нет</label>
+                            </div>
+                        </div>
+                        <div class="row main__item">
+                            <span>Публичный</span>
+                            <div class="row">
+                                <input type="radio">
+                                <label>Да</label>
+                            </div>
+                            <div class="row">
+                                <input type="radio">
+                                <label>Нет</label>
+                            </div>
+                        </div>
+                        <div class="row main__item">
+                            <span>Категории</span>
+                            <select multiple="multiple" size="3">
+                                <option>Категория 1</option>
+                                <option>Категория 2</option>
+                                <option>Категория 3</option>
+                                <option>Категория 4</option>
+                            </select>
+                        </div>
+                        <div class="row main__item">
+                            <span>Запахи</span>
+                            <select multiple="multiple" size="3">
+                                <option>Запахи 1</option>
+                                <option>Запахи 2</option>
+                                <option>Запахи 3</option>
+                                <option>Запахи 4</option>
+                            </select>
+                        </div>
+                        <div class="row main__item">
+                            <button class="main__cancel">Отменить</button>
+                            <button class="main__save">Сохранить</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <table>
+                <tr class="main__name row main__line main__inner">
+                    <th>ИД</th>
+                    <th>Имя</th>
+                    <th>Описание</th>
+                    <th>Статус</th>
+                    <th>Путь к файлу</th>
+                    <th>Иконка</th>
+                    <th>Разрешено ли скачивание</th>
+                    <th>Публичный или нет</th>
+                    <th>Продолжительность видео</th>
+                    <th>К-во просмотров</th>
+                    <th>Категории</th>
+                    <th>Запахи</th>
+                    <th>Дата создания</th>
+                    <th>Дата обновления</th>
+                    <th>Действие</th>
+                </tr>
+                <tr class=" row main__line main__inner main__info">
+                    <td>1</td>
+                    <td>Имя 1</td>
+                    <td>Описание 1</td>
+                    <td>Активный</td>
+                    <td><a href="#" class="main__link">Скачать</a></td>
+                    <td><img src="img/management.svg" alt="Иконка"></td>
+                    <td>Разрешено</td>
+                    <td>Публичный</td>
+                    <td>2-15</td>
+                    <td>0</td>
+                    <td>
+                        <ul>
+                            <li>Категориия 1</li>
+                            <li>Категориия 2</li>
+                            <li>Категориия 3</li>
+                            <li>Категориия 4</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Запах 1</li>
+                            <li>Запах 2</li>
+                            <li>Запах 3</li>
+                            <li>Запах 4</li>
+                        </ul>
+                    </td>
+                    <td>21-08-19</td>
+                    <td>21-08-19</td>
+                    <td class="row main__action">
+                        <div><img src="img/edit.svg" alt="edit"></div>
+                        <div><img src="img/delete.svg" alt="delete"></div>
+                    </td>
+                </tr>
+                <tr class=" row main__line main__inner main__info">
+                    <td>2</td>
+                    <td>Имя 2</td>
+                    <td>Описание 2</td>
+                    <td>Активный</td>
+                    <td><a href="#" class="main__link">Скачать</a></td>
+                    <td><img src="img/management.svg" alt="Иконка"></td>
+                    <td>Разрешено</td>
+                    <td>Публичный</td>
+                    <td>2-15</td>
+                    <td>0</td>
+                    <td>
+                        <ul>
+                            <li>Категориия 1</li>
+                            <li>Категориия 2</li>
+                            <li>Категориия 3</li>
+                            <li>Категориия 4</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Запах 1</li>
+                            <li>Запах 2</li>
+                            <li>Запах 3</li>
+                            <li>Запах 4</li>
+                        </ul>
+                    </td>
+                    <td>21-08-19</td>
+                    <td>21-08-19</td>
+                    <td class="row main__action">
+                        <div><img src="img/edit.svg" alt="edit"></div>
+                        <div><img src="img/delete.svg" alt="delete"></div>
+                    </td>
+                </tr>
+                <tr class=" row main__line main__inner main__info">
+                    <td>3</td>
+                    <td>Имя 3</td>
+                    <td>Описание 3</td>
+                    <td>Активный</td>
+                    <td><a href="#" class="main__link">Скачать</a></td>
+                    <td><img src="img/management.svg" alt="Иконка"></td>
+                    <td>Разрешено</td>
+                    <td>Публичный</td>
+                    <td>2-15</td>
+                    <td>0</td>
+                    <td>
+                        <ul>
+                            <li>Категориия 1</li>
+                            <li>Категориия 2</li>
+                            <li>Категориия 3</li>
+                            <li>Категориия 4</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Запах 1</li>
+                            <li>Запах 2</li>
+                            <li>Запах 3</li>
+                            <li>Запах 4</li>
+                        </ul>
+                    </td>
+                    <td>21-08-19</td>
+                    <td>21-08-19</td>
+                    <td class="row main__action">
+                        <div><img src="img/edit.svg" alt="edit"></div>
+                        <div><img src="img/delete.svg" alt="delete"></div>
+                    </td>
+                </tr>
+                <tr class=" row main__line main__inner main__info">
+                    <td>4</td>
+                    <td>Имя 4</td>
+                    <td>Описание 4</td>
+                    <td>Активный</td>
+                    <td><a href="#" class="main__link">Скачать</a></td>
+                    <td><img src="img/management.svg" alt="Иконка"></td>
+                    <td>Разрешено</td>
+                    <td>Публичный</td>
+                    <td>2-15</td>
+                    <td>0</td>
+                    <td>
+                        <ul>
+                            <li>Категориия 1</li>
+                            <li>Категориия 2</li>
+                            <li>Категориия 3</li>
+                            <li>Категориия 4</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Запах 1</li>
+                            <li>Запах 2</li>
+                            <li>Запах 3</li>
+                            <li>Запах 4</li>
+                        </ul>
+                    </td>
+                    <td>21-08-19</td>
+                    <td>21-08-19</td>
+                    <td class="row main__action">
+                        <div><img src="img/edit.svg" alt="edit"></div>
+                        <div><img src="img/delete.svg" alt="delete"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="js/stacktable.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        jQuery(function ($) {
+            $('#primary table').stacktable();
+        });
+    });
+</script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

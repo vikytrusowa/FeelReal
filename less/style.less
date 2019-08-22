@@ -1,0 +1,67 @@
+@import "tracks";
+.login {
+  background: #EFEFEF;
+  font-family: 'Roboto', sans-serif;
+  &__inner {
+    margin: 0 auto;
+    width: 65%;
+    height: 100vh;
+  }
+  &__title {
+    padding: 60px 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  &__wrap {
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+    padding: 20px;
+    width: 450px;
+    margin: 0 auto;
+  }
+  &__input {
+    font-size: 14px;
+    line-height: 30px;
+    color: #A7A8AA;
+    border: none;
+    border-bottom: 1px solid #DBDBDB;
+    padding: 10px 35px;
+    margin-bottom: 40px;
+    &--name {
+      background: url("../img/user.svg") no-repeat;
+      background-position: left;
+    }
+    &--pasword {
+      background: url("../img/passwordIcon.svg") no-repeat;
+      background-position: left;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__button {
+    background: #FF6B55;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .login__wrap{
+    width: 85%;
+  }
+}
+@media screen and (max-width: 375px){
+  .login__inner{
+    width: 98%;
+  }
+}
