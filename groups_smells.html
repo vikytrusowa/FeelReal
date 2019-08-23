@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Запахи -FeelReal Admin Panel</title>
+    <title>Групы запахов -FeelReal Admin Panel</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
@@ -13,7 +13,7 @@
 <header class="header ">
     <div class="header__wrap row">
         <span class="header__name">FeelReal Admin Panel</span>
-        <span>Запахи</span>
+        <span>Групы запахов</span>
         <a href="#"><img src="img/Admin.svg"></a>
     </div>
 </header>
@@ -51,27 +51,19 @@
     </div>
     <div class="main">
         <div class="main__wrap" id="primary">
-            <h2 class="main__title">Список запахов</h2>
-            <a href="#" data-src="#modalAdd" data-fancybox="" class="main__button">Добавить запах</a>
+            <h2 class="main__title">Список груп запахов</h2>
+            <a href="#" data-src="#modalAdd" data-fancybox="" class="main__button">Добавить групу запахов</a>
             <div class="main__modalAdd">
                 <div id="modalAdd">
                     <form class="main__add">
-                        <span class="main__subtitle">Добавить запах</span>
+                        <span class="main__subtitle">Добавить групу запахов</span>
                         <div class=" main__item">
                             <label class="main__clause">Имя </label>
                             <input type="text" class="main__input" placeholder="Введите имя" required>
                         </div>
                         <div class=" main__item">
                             <label class="main__clause">Описание </label>
-                            <textarea  class="main__input" placeholder="Введите описание" required></textarea>
-                        </div>
-                        <div class=" main__item">
-                            <label class="main__clause">Большая иконка</label>
-                            <input type="file">
-                        </div>
-                        <div class=" main__item">
-                            <label class="main__clause">Маленькая иконка </label>
-                            <input type="file">
+                            <textarea class="main__input" placeholder="Введите описание" required></textarea>
                         </div>
                         <div class=" main__item">
                             <label class="main__clause">Категории</label>
@@ -80,6 +72,23 @@
                                 <option value="2">Категория 2</option>
                                 <option value="3">Категория 3</option>
                                 <option value="4">Категория 4</option>
+                            </select>
+                        </div>
+                        <div class=" main__item">
+                            <label class="main__clause">Большая иконка </label>
+                            <input type="file">
+                        </div>
+                        <div class=" main__item">
+                            <label class="main__clause">Маленькая иконка </label>
+                            <input type="file">
+                        </div>
+                        <div class=" main__item">
+                            <label class="main__clause">Запахи</label>
+                            <select size="1" class="main__select">
+                                <option value="1" selected="selected">Запахи 1</option>
+                                <option value="2">Запахи 2</option>
+                                <option value="3">Запахи 3</option>
+                                <option value="4">Запахи 4</option>
                             </select>
                         </div>
                         <div class="row main__item main__location">
@@ -91,19 +100,20 @@
                 </div>
             </div>
             <div class="main__container">
-                <table class="main__table ">
-                    <tr class=" row  main__inner smells">
+                <table class="main__table">
+                    <tr class=" row  main__inner group">
                         <th class="main__name">ИД</th>
                         <th class="main__name">Имя</th>
                         <th class="main__name">Описание</th>
-                        <th class="main__name">Категория</th>
+                        <th class="main__name">Категории</th>
                         <th class="main__name">Большая иконка</th>
                         <th class="main__name">Маленькая иконка</th>
+                        <th class="main__name">Запахи</th>
                         <th class="main__name">Дата создания</th>
                         <th class="main__name">Дата обновления</th>
                         <th class="main__name">Действие</th>
                     </tr>
-                    <tr class=" row  main__inner main__info smells">
+                    <tr class=" row  main__inner main__info group">
                         <td>1</td>
                         <td>Имя 1</td>
                         <td>Описание 1</td>
@@ -117,14 +127,22 @@
                         </td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td>
+                            <ul>
+                                <li>Запах 1</li>
+                                <li>Запах 2</li>
+                                <li>Запах 3</li>
+                                <li>Запах 4</li>
+                            </ul>
+                        </td>
                         <td>21-08-19</td>
                         <td>21-08-19</td>
                         <td class="row main__action">
-                            <a href="#" data-src="#modalEdit1" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
+                            <a href="#" data-src="#modalEdit1" data-fancybox="" ><img src="img/edit.svg" alt="edit"></a>
                             <div class="main__modalAdd">
                                 <div id="modalEdit1">
                                     <form class="main__add">
-                                        <span class="main__subtitle">Редактировать запах</span>
+                                        <span class="main__subtitle">Редактировать групу запахов</span>
                                         <div class=" main__item">
                                             <label class="main__clause">Имя </label>
                                             <input type="text" class="main__input" placeholder="Введите имя" required>
@@ -134,7 +152,16 @@
                                             <textarea class="main__input" placeholder="Введите описание" required></textarea>
                                         </div>
                                         <div class=" main__item">
-                                            <label class="main__clause">Большая иконка</label>
+                                            <label class="main__clause">Категории</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Категория 1</option>
+                                                <option value="2">Категория 2</option>
+                                                <option value="3">Категория 3</option>
+                                                <option value="4">Категория 4</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Большая иконка </label>
                                             <input type="file">
                                         </div>
                                         <div class=" main__item">
@@ -142,12 +169,12 @@
                                             <input type="file">
                                         </div>
                                         <div class=" main__item">
-                                            <label class="main__clause">Категории</label>
+                                            <label class="main__clause">Запахи</label>
                                             <select size="1" class="main__select">
-                                                <option value="1" selected="selected">Категория 1</option>
-                                                <option value="2">Категория 2</option>
-                                                <option value="3">Категория 3</option>
-                                                <option value="4">Категория 4</option>
+                                                <option value="1" selected="selected">Запахи 1</option>
+                                                <option value="2">Запахи 2</option>
+                                                <option value="3">Запахи 3</option>
+                                                <option value="4">Запахи 4</option>
                                             </select>
                                         </div>
                                         <div class="row main__item main__location">
@@ -160,7 +187,7 @@
                             <div><img src="img/delete.svg" alt="delete"></div>
                         </td>
                     </tr>
-                    <tr class=" row  main__inner main__info smells">
+                    <tr class=" row  main__inner main__info group">
                         <td>2</td>
                         <td>Имя 2</td>
                         <td>Описание 2</td>
@@ -174,6 +201,14 @@
                         </td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td>
+                            <ul>
+                                <li>Запах 1</li>
+                                <li>Запах 2</li>
+                                <li>Запах 3</li>
+                                <li>Запах 4</li>
+                            </ul>
+                        </td>
                         <td>21-08-19</td>
                         <td>21-08-19</td>
                         <td class="row main__action">
@@ -181,7 +216,7 @@
                             <div class="main__modalAdd">
                                 <div id="modalEdit2">
                                     <form class="main__add">
-                                        <span class="main__subtitle">Редактировать запах</span>
+                                        <span class="main__subtitle">Редактировать групу запахов</span>
                                         <div class=" main__item">
                                             <label class="main__clause">Имя </label>
                                             <input type="text" class="main__input" placeholder="Введите имя" required>
@@ -191,7 +226,16 @@
                                             <textarea class="main__input" placeholder="Введите описание" required></textarea>
                                         </div>
                                         <div class=" main__item">
-                                            <label class="main__clause">Большая иконка</label>
+                                            <label class="main__clause">Категории</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Категория 1</option>
+                                                <option value="2">Категория 2</option>
+                                                <option value="3">Категория 3</option>
+                                                <option value="4">Категория 4</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Большая иконка </label>
                                             <input type="file">
                                         </div>
                                         <div class=" main__item">
@@ -199,12 +243,12 @@
                                             <input type="file">
                                         </div>
                                         <div class=" main__item">
-                                            <label class="main__clause">Категории</label>
+                                            <label class="main__clause">Запахи</label>
                                             <select size="1" class="main__select">
-                                                <option value="1" selected="selected">Категория 1</option>
-                                                <option value="2">Категория 2</option>
-                                                <option value="3">Категория 3</option>
-                                                <option value="4">Категория 4</option>
+                                                <option value="1" selected="selected">Запахи 1</option>
+                                                <option value="2">Запахи 2</option>
+                                                <option value="3">Запахи 3</option>
+                                                <option value="4">Запахи 4</option>
                                             </select>
                                         </div>
                                         <div class="row main__item main__location">
@@ -217,7 +261,7 @@
                             <div><img src="img/delete.svg" alt="delete"></div>
                         </td>
                     </tr>
-                    <tr class=" row  main__inner main__info smells">
+                    <tr class=" row  main__inner main__info group">
                         <td>3</td>
                         <td>Имя 3</td>
                         <td>Описание 3</td>
@@ -231,6 +275,14 @@
                         </td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td>
+                            <ul>
+                                <li>Запах 1</li>
+                                <li>Запах 2</li>
+                                <li>Запах 3</li>
+                                <li>Запах 4</li>
+                            </ul>
+                        </td>
                         <td>21-08-19</td>
                         <td>21-08-19</td>
                         <td class="row main__action">
@@ -238,7 +290,7 @@
                             <div class="main__modalAdd">
                                 <div id="modalEdit3">
                                     <form class="main__add">
-                                        <span class="main__subtitle">Редактировать запах</span>
+                                        <span class="main__subtitle">Редактировать групу запахов</span>
                                         <div class=" main__item">
                                             <label class="main__clause">Имя </label>
                                             <input type="text" class="main__input" placeholder="Введите имя" required>
@@ -248,7 +300,16 @@
                                             <textarea class="main__input" placeholder="Введите описание" required></textarea>
                                         </div>
                                         <div class=" main__item">
-                                            <label class="main__clause">Большая иконка</label>
+                                            <label class="main__clause">Категории</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Категория 1</option>
+                                                <option value="2">Категория 2</option>
+                                                <option value="3">Категория 3</option>
+                                                <option value="4">Категория 4</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Большая иконка </label>
                                             <input type="file">
                                         </div>
                                         <div class=" main__item">
@@ -256,12 +317,12 @@
                                             <input type="file">
                                         </div>
                                         <div class=" main__item">
-                                            <label class="main__clause">Категории</label>
+                                            <label class="main__clause">Запахи</label>
                                             <select size="1" class="main__select">
-                                                <option value="1" selected="selected">Категория 1</option>
-                                                <option value="2">Категория 2</option>
-                                                <option value="3">Категория 3</option>
-                                                <option value="4">Категория 4</option>
+                                                <option value="1" selected="selected">Запахи 1</option>
+                                                <option value="2">Запахи 2</option>
+                                                <option value="3">Запахи 3</option>
+                                                <option value="4">Запахи 4</option>
                                             </select>
                                         </div>
                                         <div class="row main__item main__location">
@@ -274,7 +335,7 @@
                             <div><img src="img/delete.svg" alt="delete"></div>
                         </td>
                     </tr>
-                    <tr class=" row  main__inner main__info smells">
+                    <tr class=" row  main__inner main__info group">
                         <td>4</td>
                         <td>Имя 4</td>
                         <td>Описание 4</td>
@@ -288,6 +349,14 @@
                         </td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td>
+                            <ul>
+                                <li>Запах 1</li>
+                                <li>Запах 2</li>
+                                <li>Запах 3</li>
+                                <li>Запах 4</li>
+                            </ul>
+                        </td>
                         <td>21-08-19</td>
                         <td>21-08-19</td>
                         <td class="row main__action">
@@ -295,7 +364,7 @@
                             <div class="main__modalAdd">
                                 <div id="modalEdit4">
                                     <form class="main__add">
-                                        <span class="main__subtitle">Редактировать запах</span>
+                                        <span class="main__subtitle">Редактировать групу запахов</span>
                                         <div class=" main__item">
                                             <label class="main__clause">Имя </label>
                                             <input type="text" class="main__input" placeholder="Введите имя" required>
@@ -305,7 +374,16 @@
                                             <textarea class="main__input" placeholder="Введите описание" required></textarea>
                                         </div>
                                         <div class=" main__item">
-                                            <label class="main__clause">Большая иконка</label>
+                                            <label class="main__clause">Категории</label>
+                                            <select size="1" class="main__select">
+                                                <option value="1" selected="selected">Категория 1</option>
+                                                <option value="2">Категория 2</option>
+                                                <option value="3">Категория 3</option>
+                                                <option value="4">Категория 4</option>
+                                            </select>
+                                        </div>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Большая иконка </label>
                                             <input type="file">
                                         </div>
                                         <div class=" main__item">
@@ -313,12 +391,12 @@
                                             <input type="file">
                                         </div>
                                         <div class=" main__item">
-                                            <label class="main__clause">Категории</label>
+                                            <label class="main__clause">Запахи</label>
                                             <select size="1" class="main__select">
-                                                <option value="1" selected="selected">Категория 1</option>
-                                                <option value="2">Категория 2</option>
-                                                <option value="3">Категория 3</option>
-                                                <option value="4">Категория 4</option>
+                                                <option value="1" selected="selected">Запахи 1</option>
+                                                <option value="2">Запахи 2</option>
+                                                <option value="3">Запахи 3</option>
+                                                <option value="4">Запахи 4</option>
                                             </select>
                                         </div>
                                         <div class="row main__item main__location">

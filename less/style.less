@@ -1,14 +1,14 @@
 @import "tracks";
 
-
 @font-face {
   font-family: 'Roboto';
-  src:  url('../fonts/Roboto.woff2') format('woff2'),
+  src: url('../fonts/Roboto.woff2') format('woff2'),
   url('../fonts/Roboto.woff') format('woff'),
   url('../fonts/Roboto.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 .login {
   background: #EFEFEF;
   font-family: 'Roboto', sans-serif;
@@ -69,82 +69,108 @@
 .smells td {
   width: 12%;
 }
+
 .smells th:first-child,
 .smells td:first-child {
   width: 4%;
 }
-@media screen and (max-width: 1300px){
-  .main__container{
+
+.group th,
+.group td {
+  width: 10%;
+}
+
+.group th:first-child,
+.group td:first-child {
+  width: 10%;
+}
+
+@media screen and (max-width: 1300px) {
+  .main__container {
     overflow-x: scroll;
     width: 100%;
   }
+
   .main__inner th,
   .main__inner td {
     word-wrap: normal;
     width: 145px;
   }
-  .main__name{
+
+  .main__name {
     font-size: 14px;
   }
-  .main__info{
+
+  .main__info {
     font-size: 14px;
   }
 
 }
 
-
 @media screen and (max-width: 768px) {
-  .sidebar{
+  .sidebar {
     width: 150px;
-    &__heading{
+    &__heading {
       padding: 0 10px;
-      & span{
+      & span {
         text-align: center;
       }
     }
   }
+
   .login__wrap {
     width: 85%;
   }
-  .main{
+
+  .main {
     width: calc(100% - 150px);
   }
-  .main__navigation{
+
+  .main__navigation {
     flex-direction: column;
   }
-  .main__text{
+
+  .main__text {
     margin-bottom: 20px;
   }
 }
-@media screen and (max-width: 415px){
-  .content{
+
+@media screen and (max-width: 415px) {
+  .content {
     flex-direction: column;
   }
-  .sidebar{
+
+  .sidebar {
     width: 100%;
     display: flex;
     flex-direction: row;
   }
-  .main{
+
+  .main {
     width: 100%;
   }
+
   .main__add {
     width: 230px;
   }
+
   .fancybox-content {
-    padding: 28px;
+    padding: 28px!important;
   }
+
   .header__name {
     width: 40%;
     text-align: center;
   }
-  .sidebar__menu{
+
+  .sidebar__menu {
     display: block;
     margin: 20px;
   }
-  .sidebar__list{
+
+  .sidebar__list {
     display: none;
-    &--open{
+    &--open {
       display: flex;
       flex-direction: column;
       position: absolute;
@@ -157,14 +183,17 @@
       padding: 50px 0;
     }
   }
-  .sidebar__link{
+
+  .sidebar__link {
     color: #FFFFFF;
   }
-  .sidebar__close{
+
+  .sidebar__close {
     display: block;
     align-self: flex-end;
   }
 }
+
 @media screen and (max-width: 375px) {
   .login__inner {
     width: 98%;
