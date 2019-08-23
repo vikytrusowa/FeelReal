@@ -1,5 +1,14 @@
 @import "tracks";
 
+
+@font-face {
+  font-family: 'Roboto';
+  src:  url('../fonts/Roboto.woff2') format('woff2'),
+  url('../fonts/Roboto.woff') format('woff'),
+  url('../fonts/Roboto.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .login {
   background: #EFEFEF;
   font-family: 'Roboto', sans-serif;
@@ -56,6 +65,14 @@
   }
 }
 
+.smells th,
+.smells td {
+  width: 12%;
+}
+.smells th:first-child,
+.smells td:first-child {
+  width: 4%;
+}
 @media screen and (max-width: 1300px){
   .main__container{
     overflow-x: scroll;
@@ -64,7 +81,7 @@
   .main__inner th,
   .main__inner td {
     word-wrap: normal;
-    width: 140px;
+    width: 145px;
   }
   .main__name{
     font-size: 14px;
@@ -110,6 +127,12 @@
   }
   .main{
     width: 100%;
+  }
+  .main__add {
+    width: 230px;
+  }
+  .fancybox-content {
+    padding: 28px;
   }
   .header__name {
     width: 40%;

@@ -177,6 +177,9 @@
     border-radius: 5px;
     padding: 5px;
     border: 2px solid #CED4DA;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: "Roboto" , sans-serif;
   }
   &__select {
     width: 100%;
@@ -234,7 +237,7 @@
 input[type="text"]:focus,
 select:focus {
   border-radius: 5px;
-  border: 2px;
+  border: 2px solid initial;
 }
 
 .fancybox-overlay-fixed {
@@ -243,11 +246,15 @@ select:focus {
 
 .main__inner th,
 .main__inner td {
-  width: 6.6%;
+  width: 7%;
   text-align: center;
   word-wrap: break-word;
   border: 1px solid #F0F0F0;
   padding: 10px 0;
+}
+.main__inner th:first-child,
+.main__inner td:first-child {
+  width: 2%;
 }
 
 .st-key {

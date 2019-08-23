@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Треки -FeelReal Admin Panel</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
 </head>
 <body>
@@ -29,16 +29,22 @@
                 <a href="#"><img src="img/close.svg" alt="close"></a>
             </li>
             <li>
-                <a href="#" class="sidebar__link">Треки</a>
+                <a href="track.html" class="sidebar__link">Треки</a>
             </li>
             <li>
-                <a href="#" class="sidebar__link">Запахи</a>
+                <a href="smells.html" class="sidebar__link">Запахи</a>
             </li>
             <li>
-                <a href="#" class="sidebar__link">Групи запахов</a>
+                <a href="groups_smells.html" class="sidebar__link">Групы запахов</a>
             </li>
             <li>
-                <a href="#" class="sidebar__link">Категории треков</a>
+                <a href="categories_track.html" class="sidebar__link">Категории треков</a>
+            </li>
+            <li>
+                <a href="categories_smells.html" class="sidebar__link">Категории запахов</a>
+            </li>
+            <li>
+                <a href="categories_set.html" class="sidebar__link">Категории сетов</a>
             </li>
         </ul>
 
@@ -49,7 +55,7 @@
             <a href="#" data-src="#modalAdd" data-fancybox="" class="main__button">Добавить трек</a>
             <div class="main__modalAdd">
                 <div id="modalAdd">
-                    <div class="main__add">
+                    <form class="main__add">
                         <span class="main__subtitle">Добавить трек</span>
                         <div class=" main__item">
                             <label class="main__clause">Имя </label>
@@ -57,7 +63,7 @@
                         </div>
                         <div class=" main__item">
                             <label class="main__clause">Описание </label>
-                            <input type="text" class="main__input" placeholder="Введите описание" required>
+                            <textarea class="main__input" placeholder="Введите описание" required></textarea>
                         </div>
                         <div class=" main__item">
                             <label class="main__clause">Статус</label>
@@ -130,7 +136,7 @@
                             <button class="main__cancel">Отменить</button>
                             <button class="main__save">Сохранить</button>
                         </div>
-                    </div>
+                    </form>
 
                 </div>
             </div>
@@ -192,7 +198,7 @@
                             <a href="#" data-src="#modalEdit1" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
                             <div class="main__modalAdd">
                                 <div id="modalEdit1">
-                                    <div class="main__add">
+                                    <form class="main__add">
                                         <span class="main__subtitle">Редактировать трек</span>
                                         <div class=" main__item">
                                             <label class="main__clause">Имя </label>
@@ -200,8 +206,8 @@
                                         </div>
                                         <div class=" main__item">
                                             <label class="main__clause">Описание </label>
-                                            <input type="text" class="main__input" placeholder="Введите описание"
-                                                   required>
+                                            <textarea class="main__input" placeholder="Введите описание"
+                                                      required></textarea>
                                         </div>
                                         <div class=" main__item">
                                             <label class="main__clause">Статус</label>
@@ -274,7 +280,7 @@
                                             <button class="main__cancel">Отменить</button>
                                             <button class="main__save">Сохранить</button>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div><img src="img/delete.svg" alt="delete"></div>
@@ -318,7 +324,7 @@
                             <a href="#" data-src="#modalEdit2" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
                             <div class="main__modalAdd">
                                 <div id="modalEdit2">
-                                    <div class="main__add">
+                                    <form class="main__add">
                                         <span class="main__subtitle">Редактировать трек</span>
                                         <div class=" main__item">
                                             <label class="main__clause">Имя </label>
@@ -326,8 +332,8 @@
                                         </div>
                                         <div class=" main__item">
                                             <label class="main__clause">Описание </label>
-                                            <input type="text" class="main__input" placeholder="Введите описание"
-                                                   required>
+                                            <textarea class="main__input" placeholder="Введите описание"
+                                                      required></textarea>
                                         </div>
                                         <div class=" main__item">
                                             <label class="main__clause">Статус</label>
@@ -400,7 +406,7 @@
                                             <button class="main__cancel">Отменить</button>
                                             <button class="main__save">Сохранить</button>
                                         </div>
-                                    </div>
+                                    </form>
 
                                 </div>
                             </div>
@@ -445,7 +451,7 @@
                             <a href="#" data-src="#modalEdit3" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
                             <div class="main__modalAdd">
                                 <div id="modalEdit3">
-                                    <div class="main__add">
+                                    <form class="main__add">
                                         <span class="main__subtitle">Редактировать трек</span>
                                         <div class=" main__item">
                                             <label class="main__clause">Имя </label>
@@ -453,8 +459,8 @@
                                         </div>
                                         <div class=" main__item">
                                             <label class="main__clause">Описание </label>
-                                            <input type="text" class="main__input" placeholder="Введите описание"
-                                                   required>
+                                            <textarea class="main__input" placeholder="Введите описание"
+                                                      required></textarea>
                                         </div>
                                         <div class=" main__item">
                                             <label class="main__clause">Статус</label>
@@ -527,7 +533,7 @@
                                             <button class="main__cancel">Отменить</button>
                                             <button class="main__save">Сохранить</button>
                                         </div>
-                                    </div>
+                                    </form>
 
                                 </div>
                             </div>
@@ -572,7 +578,7 @@
                             <a href="#" data-src="#modalEdit4" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
                             <div class="main__modalAdd">
                                 <div id="modalEdit4">
-                                    <div class="main__add">
+                                    <form class="main__add">
                                         <span class="main__subtitle">Редактировать трек</span>
                                         <div class=" main__item">
                                             <label class="main__clause">Имя </label>
@@ -580,8 +586,8 @@
                                         </div>
                                         <div class=" main__item">
                                             <label class="main__clause">Описание </label>
-                                            <input type="text" class="main__input" placeholder="Введите описание"
-                                                   required>
+                                            <textarea class="main__input" placeholder="Введите описание"
+                                                      required></textarea>
                                         </div>
                                         <div class=" main__item">
                                             <label class="main__clause">Статус</label>
@@ -654,7 +660,7 @@
                                             <button class="main__cancel">Отменить</button>
                                             <button class="main__save">Сохранить</button>
                                         </div>
-                                    </div>
+                                    </form>
 
                                 </div>
                             </div>
@@ -693,9 +699,7 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/main.js"></script>
 </body>
