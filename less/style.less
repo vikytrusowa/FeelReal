@@ -85,6 +85,16 @@
   width: 10%;
 }
 
+.categories th,
+.categories td {
+  width: 20%;
+}
+
+.categories th:first-child,
+.categories td:first-child {
+  width: 20%;
+}
+
 @media screen and (max-width: 1300px) {
   .main__container {
     overflow-x: scroll;
@@ -135,7 +145,15 @@
   }
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 450px) {
+  .header {
+    font-size: 18px;
+    &__title {
+      width: 30%;
+      text-align: center;
+    }
+  }
+
   .content {
     flex-direction: column;
   }
@@ -149,13 +167,15 @@
   .main {
     width: 100%;
   }
-
+  .main__title {
+    font-size: 22px;
+  }
   .main__add {
     width: 230px;
   }
 
   .fancybox-content {
-    padding: 28px!important;
+    padding: 28px !important;
   }
 
   .header__name {

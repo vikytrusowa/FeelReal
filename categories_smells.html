@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Категории запахов -FeelReal Admin Panel</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
+</head>
+<body>
+<header class="header ">
+    <div class="header__wrap row">
+        <span class="header__name">FeelReal Admin Panel</span>
+        <span class="header__title">Категории запахов</span>
+        <a href="#"><img src="img/Admin.svg"></a>
+    </div>
+</header>
+<div class="row content">
+    <div class="sidebar">
+        <div class="sidebar__heading">
+            <img src="img/avatar.svg" alt="Avatar" class="sidebar__avatar">
+            <span>Добро пожаловать, Админ</span>
+        </div>
+        <a class="sidebar__menu"><img src="img/menu.svg" alt="Menu-open"></a>
+        <ul class="sidebar__list">
+            <li class="sidebar__close">
+                <a href="#"><img src="img/close.svg" alt="close"></a>
+            </li>
+            <li>
+                <a href="track.html" class="sidebar__link">Треки</a>
+            </li>
+            <li>
+                <a href="smells.html" class="sidebar__link">Запахи</a>
+            </li>
+            <li>
+                <a href="groups_smells.html" class="sidebar__link">Групы запахов</a>
+            </li>
+            <li>
+                <a href="categories_track.html" class="sidebar__link">Категории треков</a>
+            </li>
+            <li>
+                <a href="categories_smells.html" class="sidebar__link">Категории запахов</a>
+            </li>
+            <li>
+                <a href="categories_set.html" class="sidebar__link">Категории сетов</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="main">
+        <div class="main__wrap" id="primary">
+            <h2 class="main__title">Список категории запахов</h2>
+            <a href="#" data-src="#modalAdd" data-fancybox="" class="main__button">Добавить категорию запахов</a>
+            <div class="main__modalAdd">
+                <div id="modalAdd">
+                    <form class="main__add">
+                        <span class="main__subtitle">Добавить категорию запахов</span>
+                        <div class=" main__item">
+                            <label class="main__clause">Имя </label>
+                            <input type="text" class="main__input" placeholder="Введите имя" required>
+                        </div>
+                        <div class="row main__item main__location">
+                            <button class="main__cancel">Отменить</button>
+                            <button class="main__save">Сохранить</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="main__container">
+                <table class="main__table">
+                    <tr class=" row  main__inner categories">
+                        <th class="main__name">ИД</th>
+                        <th class="main__name">Имя</th>
+                        <th class="main__name">Дата создания</th>
+                        <th class="main__name">Дата обновления</th>
+                        <th class="main__name">Действие</th>
+                    </tr>
+                    <tr class=" row  main__inner main__info categories">
+                        <td>1</td>
+                        <td>Имя 1</td>
+                        <td>21-08-19</td>
+                        <td>21-08-19</td>
+                        <td class="row main__action">
+                            <a href="#" data-src="#modalEdit1" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
+                            <div class="main__modalAdd">
+                                <div id="modalEdit1">
+                                    <form class="main__add">
+                                        <span class="main__subtitle">Редактировать категорию запахов</span>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Имя </label>
+                                            <input type="text" class="main__input" placeholder="Введите имя" required>
+                                        </div>
+                                        <div class="row main__item main__location">
+                                            <button class="main__cancel">Отменить</button>
+                                            <button class="main__save">Сохранить</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div><img src="img/delete.svg" alt="delete"></div>
+                        </td>
+                    </tr>
+                    <tr class=" row  main__inner main__info categories">
+                        <td>2</td>
+                        <td>Имя 2</td>
+                        <td>21-08-19</td>
+                        <td>21-08-19</td>
+                        <td class="row main__action">
+                            <a href="#" data-src="#modalEdit2" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
+                            <div class="main__modalAdd">
+                                <div id="modalEdit2">
+                                    <form class="main__add">
+                                        <span class="main__subtitle">Редактировать категорию запахов</span>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Имя </label>
+                                            <input type="text" class="main__input" placeholder="Введите имя" required>
+                                        </div>
+                                        <div class="row main__item main__location">
+                                            <button class="main__cancel">Отменить</button>
+                                            <button class="main__save">Сохранить</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div><img src="img/delete.svg" alt="delete"></div>
+                        </td>
+                    </tr>
+                    <tr class=" row  main__inner main__info categories">
+                        <td>3</td>
+                        <td>Имя 3</td>
+                        <td>21-08-19</td>
+                        <td>21-08-19</td>
+                        <td class="row main__action">
+                            <a href="#" data-src="#modalEdit3" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
+                            <div class="main__modalAdd">
+                                <div id="modalEdit3">
+                                    <form class="main__add">
+                                        <span class="main__subtitle">Редактировать категорию запахов</span>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Имя </label>
+                                            <input type="text" class="main__input" placeholder="Введите имя" required>
+                                        </div>
+                                        <div class="row main__item main__location">
+                                            <button class="main__cancel">Отменить</button>
+                                            <button class="main__save">Сохранить</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div><img src="img/delete.svg" alt="delete"></div>
+                        </td>
+                    </tr>
+                    <tr class=" row  main__inner main__info categories">
+                        <td>4</td>
+                        <td>Имя 4</td>
+                        <td>21-08-19</td>
+                        <td>21-08-19</td>
+                        <td class="row main__action">
+                            <a href="#" data-src="#modalEdit4" data-fancybox=""><img src="img/edit.svg" alt="edit"></a>
+                            <div class="main__modalAdd">
+                                <div id="modalEdit4">
+                                    <form class="main__add">
+                                        <span class="main__subtitle">Редактировать категорию запахов</span>
+                                        <div class=" main__item">
+                                            <label class="main__clause">Имя </label>
+                                            <input type="text" class="main__input" placeholder="Введите имя" required>
+                                        </div>
+                                        <div class="row main__item main__location">
+                                            <button class="main__cancel">Отменить</button>
+                                            <button class="main__save">Сохранить</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div><img src="img/delete.svg" alt="delete"></div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="row main__navigation">
+                <span class="main__text">Показано с 1 по 4 из 4 записей</span>
+                <ul class="row">
+                    <li>
+                        <a href="#" class="main__pagination"> &laquo;</a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination"> < </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination">1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination">2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination">3</a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination"> > </a>
+                    </li>
+                    <li>
+                        <a href="#" class="main__pagination">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
