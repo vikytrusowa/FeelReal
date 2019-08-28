@@ -51,10 +51,10 @@
       background: rgba(162, 162, 162, 0.09);
     }
   }
-  &__menu{
+  &__menu {
     display: none;
   }
-  &__close{
+  &__close {
     display: none;
   }
 }
@@ -96,7 +96,7 @@
     align-self: flex-end;
     margin-bottom: 20px;
     text-decoration: none;
-    &:hover{
+    &:hover {
       background: #6945FF
     }
   }
@@ -182,7 +182,7 @@
     border: 2px solid #CED4DA;
     font-size: 16px;
     line-height: 19px;
-    font-family: "Roboto" , sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   &__select {
     width: 100%;
@@ -212,7 +212,7 @@
       background: yellow;
     }
   }
-  &__pagination{
+  &__pagination {
     font-size: 14px;
     line-height: 16px;
     color: #6C7177;
@@ -223,7 +223,7 @@
     text-decoration: none;
     padding: 8px 11px;
   }
-  &__navigation{
+  &__navigation {
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
@@ -231,16 +231,64 @@
     color: #6C7177;
     margin: 20px 0;
   }
-  &__status{
+  &__status {
     flex-wrap: wrap;
     word-wrap: break-word;
   }
+  &__selectBox {
+    position: relative;
+    & select {
+      width: 100%;
+    }
+  }
+  &__overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
 }
 
 input[type="text"]:focus,
 select:focus {
   border-radius: 5px;
   border: 2px solid initial;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, .3);
+  outline: none;
+  box-sizing: border-box;
+  margin: 3px 3px 0 3px;
+}
+
+input[type="checkbox"]:checked:before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 11px;
+  border: 0 solid #4CAF50;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotateZ(45deg);
+  margin: -2px 3px;
+  pointer-events: none;
 }
 
 .fancybox-overlay-fixed {
@@ -255,10 +303,12 @@ select:focus {
   border: 1px solid #F0F0F0;
   padding: 10px 0;
 }
+
 .main__inner th:first-child,
 .main__inner td:first-child {
   width: 2%;
 }
+
 .st-key {
   font-weight: bold;
   font-size: 14px;

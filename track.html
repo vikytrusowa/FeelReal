@@ -114,23 +114,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class=" main__item">
+                        <div class=" main__item ">
                             <label class="main__clause">Категории</label>
-                            <select size="1" class="main__select">
-                                <option value="1" selected="selected">Категория 1</option>
-                                <option value="2">Категория 2</option>
-                                <option value="3">Категория 3</option>
-                                <option value="4">Категория 4</option>
-                            </select>
-                        </div>
-                        <div class=" main__item">
-                            <label class="main__clause">Запахи</label>
-                            <select size="1" class="main__select">
-                                <option value="1" selected="selected">Запахи 1</option>
-                                <option value="2">Запахи 2</option>
-                                <option value="3">Запахи 3</option>
-                                <option value="4">Запахи 4</option>
-                            </select>
+                            <div class="main__selectBox" onclick="showCheckboxes()">
+                                <select class="main__select">
+                                    <option class="main__clause">Категории</option>
+                                </select>
+                                <div class="main__overSelect"></div>
+                            </div>
+                            <div id="checkboxes">
+                                <label for="one">
+                                    <input type="checkbox" id="one"/>Категория 1</label>
+                                <label for="two">
+                                    <input type="checkbox" id="two"/>Категория 2</label>
+                                <label for="three">
+                                    <input type="checkbox" id="three"/>Категория 3</label>
+                            </div>
                         </div>
                         <div class="row main__item main__location">
                             <button class="main__cancel">Отменить</button>
