@@ -75,11 +75,20 @@
                         </div>
                         <div class=" main__item">
                             <label class="main__clause">Категории</label>
-                            <select size="1" class="main__select">
-                                <option value="1" selected="selected">Категория 1</option>
-                                <option value="2">Категория 2</option>
-                                <option value="3">Категория 3</option>
-                                <option value="4">Категория 4</option>
+                            <div class="main__selectBox" onclick="showCheckboxes()">
+                                <select class="main__select">
+                                    <option class="main__clause">Категории</option>
+                                </select>
+                                <div class="main__overSelect"></div>
+                            </div>
+                            <div id="checkboxes">
+                                <label for="one">
+                                    <input type="checkbox" id="one"/>Категория 1</label>
+                                <label for="two">
+                                    <input type="checkbox" id="two"/>Категория 2</label>
+                                <label for="three">
+                                    <input type="checkbox" id="three"/>Категория 3</label>
+                            </div>
                             </select>
                         </div>
                         <div class="row main__item main__location">
@@ -115,7 +124,7 @@
                                 <li>Категориия 4</li>
                             </ul>
                         </td>
-                        <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td><img src="img/lavender.jpg" alt="Иконка"></td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
                         <td>21-08-19</td>
                         <td>21-08-19</td>
@@ -173,7 +182,7 @@
                                 <li>Категориия 4</li>
                             </ul>
                         </td>
-                        <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td><img src="img/sea.jpg" alt="Иконка"></td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
                         <td>21-08-19</td>
                         <td>21-08-19</td>
@@ -231,7 +240,7 @@
                                 <li>Категориия 4</li>
                             </ul>
                         </td>
-                        <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td><img src="img/sea2.jpg" alt="Иконка"></td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
                         <td>21-08-19</td>
                         <td>21-08-19</td>
@@ -289,7 +298,7 @@
                                 <li>Категориия 4</li>
                             </ul>
                         </td>
-                        <td><img src="img/management.svg" alt="Иконка"></td>
+                        <td><img src="img/sea3.jpg" alt="Иконка"></td>
                         <td><img src="img/management.svg" alt="Иконка"></td>
                         <td>21-08-19</td>
                         <td>21-08-19</td>
